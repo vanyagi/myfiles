@@ -7,7 +7,7 @@ for i in range(0, len(message)):
         enc_str = enc_str + "0"
     else:
         enc_str = enc_str + "1"
-print("Зашиврованное: " + enc_str)
+print("Зашифрованное: " + enc_str)
 
 
 un_enc = ""

@@ -1,25 +1,18 @@
-alphabet = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦУШЩЪЬЭЮЯ"
-alphabet = alphabet * 3
-message = input("\nВведите сообщение для шифрования: ")
-message = message.upper()
-key = int(input("Введите значение ключа для смещения: "))
-new_message = ""
-for letter in message:
-    if letter == " ":
-        new_message = new_message + " "
-    else:
-        index = alphabet.find(letter)
-        new_ind = index + key
-        new_message = new_message + alphabet[new_ind]
+import lab1
+from lab1 import exc1_1, exc1_2
 
-print(new_message)
-old_message = ""
-for letter in new_message:
-    if letter == " ":
-        old_message = old_message + " "
-    else:
-        index = alphabet.find(letter)
-        new_ind = index - key
-        old_message = old_message + alphabet[new_ind]
 
-print(old_message)
+
+def main():
+    choose_lab = int(input("Введите номер лабораторной работы которую хотите выполнить: "))
+    if choose_lab == 1:
+        choose_exc = int(input("Введите номер задания которое хотите выполнить: "))
+        if choose_exc == 1:
+            exc1_1()
+        elif choose_exc == 2:
+            exc1_2()
+        else:
+            print("Ошибка! Такого задания нет, попробуйте снова")
+
+while 1 > 0:
+    main()
